@@ -1,0 +1,3 @@
+[submodule "/Users/tanhopdo/.config/nvim"]
+	path = /Users/tanhopdo/.config/nvim
+	url = git@github.com:HowardDo2208/howard-nvim.git
