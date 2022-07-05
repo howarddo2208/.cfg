@@ -64,6 +64,8 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.view.adaptive_size = true
+lvim.builtin.treesitter.rainbow.enable = true
+lvim.builtin.treesitter.autotag.enable = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -209,6 +211,15 @@ lvim.plugins = {
       "Gedit"
     },
     ft = { "fugitive" }
+  },
+  {
+    "p00f/nvim-ts-rainbow",
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
 }
 
