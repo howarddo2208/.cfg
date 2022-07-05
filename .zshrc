@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 source ~/.profile
 # }}}
 
@@ -30,6 +31,7 @@ alias zshrc="vim ~/.zshrc"
 alias zshrcs="source ~/.zshrc"
 alias vimrc="vim ~/.config/nvim/init.lua"
 alias vimrcs="source ~/.config/nvim/init.vim"
+alias vim=lvim
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ll="exa -l -g --icons"
 alias ls="exa --icons"
@@ -40,8 +42,10 @@ alias gitmerge="git checkout $1 && git pull && git checkout - && git merge -"
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 #}}}
 
+
 # end script -------------- {{{
 # }}}
+
 
 alias config='/usr/bin/git --git-dir=/Users/tanhopdo/.cfg/ --work-tree=/Users/tanhopdo'
 alias config='/usr/bin/git --git-dir=/Users/tanhopdo/.cfg/ --work-tree=/Users/tanhopdo'
