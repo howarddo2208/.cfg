@@ -12,8 +12,15 @@ export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 
+# tmuxifier
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
 # fast node version manager
 eval "$(fnm env)"
 
 # quick navigate folder
 eval "$(zoxide init zsh)"
+
+# ruby version manager rbenv
+eval "$(rbenv init - zsh)"

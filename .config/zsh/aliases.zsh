@@ -1,9 +1,12 @@
 #!/bin/sh
+alias reloadshell='source $ZSHRC'
 alias v='nvim'
-alias v.='nvim .'
+alias vv='nvim .'
 alias g='lazygit'
+alias zshrc="nvim $ZDOTDIR"
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
+alias txi='tmuxifier'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
