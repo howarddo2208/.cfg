@@ -1,14 +1,17 @@
 #!/bin/sh
 alias reloadshell='source $ZSHRC'
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+
+# neovim
 alias v='nvim'
 alias vv='nvim .'
-alias g='lazygit'
 alias zshrc="nvim $ZDOTDIR"
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
+
+# tmux
 alias txi='tmuxifier' # tmux session preset
 alias tmuxrc='nvim ~/.tmux.conf'
-alias cs="cht.sh" # cheatsheet for command lines
+
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -23,11 +26,17 @@ alias rm='rm -i'
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 
+# git
 alias m="git checkout master"
 alias s="git checkout stable"
+alias g='lazygit'
 
 #config repo
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# other
+alias mc="mc --nosubshell" # midnight commander
+alias cs="cht.sh" # cheatsheet for command lines
 
 case "$(uname -s)" in
 
