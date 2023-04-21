@@ -7,3 +7,4 @@
 .config/zsh/.DS_Store
 
 .config/karabiner/automatic_backups
+.config/mc/hotlist*

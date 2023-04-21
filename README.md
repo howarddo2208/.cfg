@@ -7,3 +7,5 @@ to install TPM (tmux plugin manager) and all the tmux plugins:
     1. `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
     2. go on tmux, press `<leader>I`
+
+to install the theme of **Midnight commander** `mc`: `cp -r ~/.config/mc/skins ~/.local/share/mc/`
