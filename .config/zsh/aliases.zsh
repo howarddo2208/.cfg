@@ -22,7 +22,6 @@ alias rm='rm -i'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
-alias free='free -m' # show sizes in MB
 
 alias m="git checkout master"
 alias s="git checkout stable"

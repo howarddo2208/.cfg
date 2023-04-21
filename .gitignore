@@ -5,3 +5,5 @@
 .config/zsh/.zsh_sessions
 .config/zsh/.zsh_history
 .config/zsh/.DS_Store
+
+.config/karabiner/automatic_backups
