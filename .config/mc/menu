@@ -101,6 +101,15 @@ shell_patterns=0
         zip $zip.zip * && \
         echo "../$zip.zip created."
 
+9       Copy the file path to clipboard
+        if [ "$(uname)" = "Darwin" ]; then
+            echo "$(pwd)/%f" | pbcopy
+        elif [ "$(uname)" = "Linux" ]; then
+            echo "$(pwd)/%f" | xclip -selection clipboard
+        elif [ "$(uname)" = "MINGW64_NT-10.0" ]; then
+            echo "$(pwd)/%f" | clip
+        fi
+
 = f \.c$ & t r
 + f \.c$ & t r & ! t t
 c       Compile and link current .c file
@@ -371,6 +380,8 @@ C       Convert gz<->bz2, tar.gz<->tar.bz2 & tgz->tar.bz2
                 bzip2 -v "$D"
             fi
         done
++ p
+  Pipe to clipcopy %f
 
 + x /usr/bin/open | x /usr/local/bin/open & x /bin/sh
 o       Open next a free console
