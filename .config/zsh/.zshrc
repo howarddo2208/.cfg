@@ -11,7 +11,6 @@ plug "$HOME/.config/zsh/exports.zsh"
 
 # plugins
 plug "zsh-users/zsh-autosuggestions"
-plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/vim"
 plug "zap-zsh/zap-prompt"
@@ -30,7 +29,3 @@ if command -v bat &> /dev/null; then
   alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
-# pnpm
-export PNPM_HOME="/Users/tanhopdo/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end

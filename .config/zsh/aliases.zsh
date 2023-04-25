@@ -35,7 +35,6 @@ alias g='lazygit'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # other
-alias mc="mc --nosubshell" # midnight commander
 alias cs="cht.sh" # cheatsheet for command lines
 
 case "$(uname -s)" in
