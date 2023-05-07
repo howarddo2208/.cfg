@@ -5,6 +5,12 @@
 # history
 HISTFILE=~/.zsh_history
 
+#enable fzf keybindings
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
+
 # source
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
@@ -14,7 +20,6 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/vim"
 plug "zap-zsh/zap-prompt"
-plug "zap-zsh/fzf"
 plug "zap-zsh/exa"
 plug "zsh-users/zsh-syntax-highlighting"
 
@@ -29,3 +34,6 @@ if command -v bat &> /dev/null; then
   alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
+# atuin: sqlite command history
+eval "$(atuin init zsh --disable-ctrl-r --disable-up-arrow)"
+bindkey '^e' _atuin_search_widget
