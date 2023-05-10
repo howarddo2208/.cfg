@@ -1,3 +1,4 @@
+# ⚠️ This repo is no longer maintained, I've switched to managing my dotfiles with nix, you can view it [here](https://github.com/howarddo2208/nixfiles)
 dotfile repo method reference from: https://www.atlassian.com/git/tutorials/dotfiles
 
 zsh config reference from: https://github.com/ChristianChiarulli/Machfiles/tree/master/zsh
